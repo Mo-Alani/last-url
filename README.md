@@ -27,3 +27,11 @@ If you want to see the history of redirections (all the intermediate links, if a
 or
 
 `python3 last-url.py -h http://"your URL here"`
+
+Example:
+
+`git clone https://github.com/Mo-Alani/last-url.git`
+
+`cd last-url`
+
+`python last-url.py -h http://mohammedalani.com`
