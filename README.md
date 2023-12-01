@@ -6,7 +6,7 @@
 ## Downloading the script
 On your machine just type:
 
-`git clone https://`
+`git clone https://github.com/Mo-Alani/last-url.git`
 
 ***
 
