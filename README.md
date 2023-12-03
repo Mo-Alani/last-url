@@ -14,19 +14,27 @@ On your machine just type:
 The script was written to be a simple command line script to resolve the final URL after redirection.
 To get the final URL only (without the rest of the redirection history):
 
-`python last-url.py http://"your URL here"`
+`python last-url.py http://your-URL-here`
 
 or
 
-`python3 last-url.py http://"your URL here"`
+`python3 last-url.py http://your-URL-here`
 
 If you want to see the history of redirections (all the intermediate links, if any):
 
-`python last-url.py -h http://"your URL here"`
+`python last-url.py -h http://your-URL-here`
 
 or
 
-`python3 last-url.py -h http://"your URL here"`
+`python3 last-url.py -h http://your-URL-here`
+
+If the URL has "&" in it, you'll need to wrap it with quotation marks:
+
+`python last-url.py -h "http://your-URL-here-with-&-character"`
+
+or
+
+`python3 last-url.py -h "http://your-URL-here-with-&-character"`
 
 Example:
 
