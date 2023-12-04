@@ -39,7 +39,7 @@ or
 ## Compiled File
 There is also an executable file in the repo if you want to use as a standalone binary for Windows:
 
-`last-url.exe http://your-UTL-here`
+`last-url.exe http://your-URL-here`
 
 ## Example:
 
