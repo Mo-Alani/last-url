@@ -36,7 +36,12 @@ or
 
 `python3 last-url.py -h "http://your-URL-here-with-&-character"`
 
-Example:
+## Compiled File
+There is also an executable file in the repo if you want to use as a standalone binary for Windows:
+
+`last-url.exe http://your-UTL-here`
+
+## Example:
 
 `git clone https://github.com/Mo-Alani/last-url.git`
 
