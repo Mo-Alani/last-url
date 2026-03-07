@@ -8,8 +8,7 @@
 
 import requests
 import sys
-
-commands = sys.argv
+import argparse
 
 def get_the_url(url):
     try:
@@ -19,22 +18,29 @@ def get_the_url(url):
             history.append(resp.headers['Location'])
         history.insert(0,url)
     except:
-        print("There's a problem in the URL!!! RUN!!!")
+        print("The URL couldn't be resolved!!! RUN!!!")
     return (history)
 
-if len(commands) == 1:
-    print('This script will show you the final URL for a redicrected URL.\nRun the script followed by the URL to get the final URL, or use "-h" to show all redirection URLs in the middle. Enjoy!!\nExample: python last-url.py -h http://www.mohammedalani.com')
+parser = argparse.ArgumentParser(description="last-url is a small tool designed to find the last URL in a redirected URL.\npython last-url.py --url https://mohammedalani.com -h")
+parser.add_argument("-u","--url", metavar="url", type=str, help="The URL you want to resolve")
+parser.add_argument("-f","--full", action='store_true', help="Show the full history of redirections until the last URL.")
+
+args = parser.parse_args()
+
+print("Looking up this suspicious URL for you...")
+
+if (not args.url):
+    parser.print_help()
     sys.exit()
 
-if commands[1] == '-h':
-    first_url = commands[2]
-    h = get_the_url(first_url)
-    for i in range(len(h)):
-        msg = "URL " + str(i+1) +": "+ h[i]
-        print(msg)
+h = get_the_url(args.url)
+
+if (not args.full):
+        print(f"Last URL is: {h[-1]}")
 else:
-    first_url = commands[1]
-    h = get_the_url(first_url)
-    print("Final URL: ", h[-1])
+        for i in range(len(h)):
+            print(f"URL {i+1}: {h[i]}")
+
+
 
     

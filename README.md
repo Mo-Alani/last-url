@@ -14,37 +14,33 @@ On your machine just type:
 The script was written to be a simple command line script to resolve the final URL after redirection.
 To get the final URL only (without the rest of the redirection history):
 
-`python last-url.py http://your-URL-here`
+`python last-url.py -u http://your-URL-here`
 
 or
 
-`python3 last-url.py http://your-URL-here`
+`python3 last-url.py -u http://your-URL-here`
 
-If you want to see the history of redirections (all the intermediate links, if any):
+If you want to see the full history of redirections (all the intermediate links, if any):
 
-`python last-url.py -h http://your-URL-here`
+`python last-url.py -u http://your-URL-here -f`
 
 or
 
-`python3 last-url.py -h http://your-URL-here`
+`python3 last-url.py -u http://your-URL-here -f`
 
 If the URL has "&" in it, you'll need to wrap it with quotation marks:
 
-`python last-url.py -h "http://your-URL-here-with-&-character"`
+`python last-url.py -u "http://your-URL-here-with-&-character" -f`
 
 or
 
-`python3 last-url.py -h "http://your-URL-here-with-&-character"`
-
-## Compiled File
-There is also an executable file in the repo if you want to use as a standalone binary for Windows:
-
-`last-url.exe http://your-URL-here`
+`python3 last-url.py -u "http://your-URL-here-with-&-character" -f`
 
 ## Example:
 
-`git clone https://github.com/Mo-Alani/last-url.git`
+        git clone https://github.com/Mo-Alani/last-url.git
+        cd last-url
+        python last-url.py -u http://mohammedalani.com -h
 
-`cd last-url`
-
-`python last-url.py -h http://mohammedalani.com`
+## Contributors
+Mohammed M. Alani ([@Mo-Alani](https://github.com/Mo-Alani))
