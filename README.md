@@ -40,7 +40,7 @@ or
 
         git clone https://github.com/Mo-Alani/last-url.git
         cd last-url
-        python last-url.py -u http://mohammedalani.com -h
+        python last-url.py -u http://mohammedalani.com -f
 
 ## Contributors
 Mohammed M. Alani ([@Mo-Alani](https://github.com/Mo-Alani))
